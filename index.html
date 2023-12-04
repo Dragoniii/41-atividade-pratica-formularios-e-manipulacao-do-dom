@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade Prática - Formulários e Manipulação do DOM</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form id="form">
+      <h1>Formulário</h1>
+
+      <fieldset>
+        <legend><h2>Dados pessoais:</h2></legend>
+        <div>
+          <label for="nome"><strong>Nome: </strong></label>
+          <input
+            type="text"
+            placeholder="Digite seu nome."
+            name="nome"
+            id="nome"
+            required
+          />
+        </div>
+        <br />
+        <div class="campo">
+          <label for="endereco"><strong>Endereço: </strong></label>
+          <input
+            type="text"
+            placeholder="Digite seu endereco."
+            name="endereco"
+            id="endereco"
+            required
+          />
+        </div>
+        <br />
+        <div class="campo">
+          <label for="email"><strong>Email: </strong></label>
+          <input
+            type="email"
+            placeholder="Digite seu e-mail."
+            name="email"
+            id="email"
+            required
+          />
+        </div>
+        <br />
+        <div class="campo">
+          <label for="estado"><strong>Estado</strong></label>
+          <select id="estado" required>
+            <option selected disabled value="">Selecione</option>
+            <option>Rio Grande do Sul</option>
+            <option>Santa Catarina</option>
+          </select>
+        </div>
+      </fieldset>
+      <br />
+      <fieldset class="grupo">
+        <legend><h2>Dados profissionais:</h2></legend>
+        <div id="check">
+          <label><strong>Natureza do cargo:</strong></label
+          ><br />
+
+          <input type="radio" id="cargo1" name="cargo" value="Gerencia" />
+          <label for="cargo1"> Gerência</label>
+
+          <input type="radio" id="cargo2" name="cargo" value="Financeiro" />
+          <label for="cargo2"> Financeiro</label>
+
+          <input type="radio" id="cargo3" name="cargo" value="Recepcao" />
+          <label for="cargo3"> Recepção</label>
+
+          <input type="radio" id="cargo4" name="cargo" value="Administrativo" />
+          <label for="cargo4"> Administrativo</label>
+
+          <input type="radio" id="cargo5" name="cargo" value="Juridico" />
+          <label for="cargo5"> Jurídico</label>
+          
+          <br /><br />
+          <label><strong>Área de interesse:</strong></label
+          ><br />
+
+          <input type="checkbox" id="area1" name="area" value="Computação" />
+          <label for="area1"> Computação</label>
+          
+          <input type="checkbox" id="area2" name="area" value="Biologia" />
+          <label for="area2"> Biologia</label>
+          
+          <input
+            type="checkbox"
+            id="area3"
+            name="area"
+            value="Meio Hambiente"
+          />
+          <label for="area3"> Meio Hambiente</label>
+          
+          <input type="checkbox" id="area4" name="area" value="Engenharia" />
+          <label for="area4"> Engenharia</label>
+          
+          <input type="checkbox" id="area5" name="area" value="História" />
+          <label for="area5"> História</label>
+          
+          <br /><br />
+          
+          
+          <label for="curriculo"><strong>Mini-currículo: </strong></label>
+          <textarea
+            cols="30"
+            rows="1"
+            id="curriculo"
+            name="curriculo"
+            placeholder="Resuma sua trajetória profissional aqui..."
+          ></textarea>
+        </div>
+      </fieldset>
+
+      <div class="campo">
+        <br />
+      </div>
+
+      <button type="submit" onsubmit="">Enviar</button>
+      <button class="botao" onsubmit="">Limpar</button>
+    </form>
+  </body>
+</html>
